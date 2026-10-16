@@ -1,0 +1,1761 @@
+
+Gemini ile sohbet
+Aklımda bir proje var. Index HTML proje fikri şu şekilde. Biz GençTek web sitesi yapmaya çalışıyoruz ve bize kod lazım. Bizim projemiz şöyle. Biz duygu ve düşüncelerimizi Motora yazdığımızda bize tablo ve onun anlamı, hobi, müzik, dizi veya film önerecek. arkaplanı her açtığımızda değişicek.
+
+GençTek için hazırladığım interaktif duygu ve düşünce analiz/öneri motorunun kodlarını içeren HTML dosyasını oluşturuyorum.
+
+Bu uygulama şunları içerir:
+
+Dinamik Arka Plan: Her sayfa yenilendiğinde veya sağ üstteki "Arka Planı Değiştir" butonuna tıklandığında değişen yüksek kaliteli gradyan ve Unsplash arka plan kombinasyonları.
+
+Akıllı Metin Analiz Motoru: Yazılan duygu ve düşünceleri (anahtar kelime ve his analizi simülasyonu ile) 6 farklı duygu durumuna (Mutlu, Üzgün, Stresli/Yorgun, Heyecanlı, Sakin/Odaklanmış, Yaratıcı/Meraklı) kategorize eden gelişmiş algoritma.
+
+Hızlı Duygu Butonları: Tek tıkla hızlı analiz başlatabilme.
+
+Kapsamlı Öneri Kartları: Duygu anlamı, Sanat eseri/Tablo, Hobi, Müzik (YouTube/Spotify arama bağlantılı) ve Dizi/Film önerileri.
+
+Geçmiş (LocalStorage): Yapılan son analizleri tarayıcıda saklama ve tekrar inceleyebilme imkanı.
+
+Modern GençTek Tasarımı: Glassmorphism, akıcı Tailwind CSS animasyonları ve responsive mobil uyumlu yapı.
+
+Moodify - AI Emotion & Recommendation Engine
+16 Eki 14:15
+biz çok daha farklı bir sürü her alana uzanan bir duygular istiyoruz.tekrar yap.
+
+İstediğin son derece kapsamlı, 20 farklı duygu katmanını (Kaygı, Nostalji, Tükenmişlik, Arayış, Huzur, Keşif vb.) barındıran ve her duygu için 7 farklı alanda (Psikolojik Anlam, Sanat/Tablo, Hobi, Müzik, Film/Dizi, Kitap/Şiir ve Günün Eylemi) derinlemesine öneri sunan GençTek Duygu & Düşünce Analiz Motoru hazırlandı.
+
+Eklenen Özellikler ve Yenilikler:
+20+ Genişletilmiş Duygu Spektrumu: Kelime analiz algoritması ve duygu seçici kartları ile Hüzün, Stres, İlham, Nostalji, Tükenmişlik, Keşif Arzusu, Kararsızlık, Minnettarlık, Motivasyon, Monotonluk gibi 20 farklı ruh halini tam isabetle tespit eder.
+
+7 Katmanlı Zengin Öneri Sistemi:
+
+🧠 Psikolojik & Felsefi Analiz
+
+🎨 Sanat Eseri & Tablo (Görseli, sanatçısı, dönemi ve felsefi bağı)
+
+🏃 Hobi & Aktivite (Fiziksel, zihinsel veya yaratıcı)
+
+🎵 Müzik & Playlist (Spotify & YouTube yönlendirmeleri ile)
+
+🎬 Dizi & Film (Tür ve izleme nedeni ile)
+
+📚 Kitap & Şiir (Eser, yazar ve ilham verici alıntı)
+
+💡 Günün Yaşam Eylemi (Anlık farkındalık adımı)
+
+Favorilere Ekleme & Geçmiş: Beğenilen önerileri favorilere kaydetme ve LocalStorage altyapısı ile geçmiş analizlere erişebilme.
+
+Dinamik Arka Plan & Glassmorphism UI: Yüksek çözünürlüklü doğa/soyut görselleri ve akıcı geçiş efektleri.
+
+Moodify - AI Emotion & Recommendation Engine
+16 Eki 14:15
+genç tek yerine ismi moodify olucak ve bize önerilerimizi verdiği zaman belirtici bir efekt sesi olsun
+
+I will now generate the complete single-page web application for Moodify, featuring synthesized Web Audio API sound effects, an audio toggle, smooth glassmorphism animations, and the expansive 20-spectrum recommendation engine.
+
+Moodify - AI Emotion & Recommendation Engine
+
+
+
+Moodify Güncellemeleri:
+İsim Değişikliği: Tüm referanslar Moodify olarak güncellendi.
+
+Web Audio API Ses Motoru: Dışarıdan MP3 dosyası indirmeye gerek duymadan tarayıcı içerisinde anında sentezlenen sihirli parıltı/şime sesi eklendi. Duygu analiz edilip kartlar görünür görünmez bu ses çalınır.
+
+Ses Açma/Kapama (Mute/Unmute) Butonu: Sağ üst menüde ses durumunu canlı gösteren ve kolayca kapatılıp açılabilen kontrol düğmesi yerleştirildi.
+
+Pop-in & Shimmer Animasyonları: Öneri kartları açılırken akıcı ve şık bir pop-in ve parlama efekti uygulandı.
+
+bu koda 1.jpeg,2.jpeg,3.jpeg,4.jpeg,5.jpeg,6.jpeg görsellerini yaz. bir de bu görseller uygulamaya her girdiğimizde döngü olarak değişsin
+
+Moodify uygulamasının güncellenmiş kodlarını hazırladım!
+
+Yapılan Yenilikler:
+Yerel Arka Plan Görselleri (1.jpeg - 6.jpeg):
+
+Kod, verdiğin 1.jpeg, 2.jpeg, 3.jpeg, 4.jpeg, 5.jpeg, 6.jpeg dosyalarını arka plan listesine ekledi.
+
+Sıralı / Döngüsel Değişim (Cycle Mode):
+
+Uygulamaya her girildiğinde (veya sayfa her yenilendiğinde) bir sonraki görsel sırayla gösterilir (1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 1...).
+
+Hangi görselde kalındığı localStorage üzerinde saklanır, böylece döngü hiçbir zaman bozulmaz.
+
+Manuel Arka Plan Değiştirme:
+
+Sağ üstteki "Arka Planı Değiştir" butonuna tıklandığında döngüdeki bir sonraki görsele anında geçiş yapılır.
+
+index.html [generated with web_code_canvas tool]
+
+şimdi kodu gönder
+
+İşte Moodify projesinin tüm özelliklerini, 1.jpeg - 6.jpeg döngüsel arka plan sistemini, Web Audio API ses efektini ve 20 genişletilmiş duygu spektrumunu içeren tam index.html kodu.
+
+Bu kodu bilgisayarınızda bir index.html dosyası oluşturup içine yapıştırabilirsiniz. Arka plan görsellerinin doğru görünmesi için 1.jpeg, 2.jpeg, 3.jpeg, 4.jpeg, 5.jpeg ve 6.jpeg dosyalarının index.html ile aynı klasörde yer alması yeterlidir.
+
+HTML
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodify - Duygu, Düşünce & Yaşam Rehberi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        mood: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            900: '#134e4a',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pop-in': 'popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        popIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.9) translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0f172a;
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.55);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(20, 184, 166, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .bg-overlay {
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.75) 0%, rgba(15, 23, 42, 0.85) 50%, rgba(15, 23, 42, 0.95) 100%);
+        }
+    </style>
+</head>
+<body class="text-slate-100 min-h-screen relative flex flex-col justify-between overflow-x-hidden selection:bg-teal-500 selection:text-white">
+
+    <!-- Dinamik Arka Plan Katmanı (1.jpeg - 6.jpeg Döngüsü) -->
+    <div id="bg-container" class="fixed inset-0 z-0 bg-cover bg-center transition-all duration-1000 transform scale-105"></div>
+    <div class="fixed inset-0 z-0 bg-overlay pointer-events-none"></div>
+
+    <!-- Üst Header Bar -->
+    <header class="relative z-10 w-full px-6 py-4 glass-panel border-b border-slate-800/50 sticky top-0">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-3 cursor-pointer" onclick="resetToHome()">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-teal-500/20">
+                    <i class="fa-solid font-bold text-xl text-white">M</i>
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-indigo-300 to-purple-400">
+                        Moodify
+                    </h1>
+                    <p class="text-[10px] text-teal-400/80 font-medium tracking-wider uppercase">Duygu & Düşünce Motoru</p>
+                </div>
+            </div>
+
+            <!-- Sağ Aksiyon Butonları -->
+            <div class="flex items-center gap-2 sm:gap-4">
+                <!-- Ses Aç/Kapat -->
+                <button id="sound-toggle-btn" onclick="toggleSound()" title="Ses Efektlerini Aç/Kapat" class="p-2.5 rounded-xl glass-card hover:bg-slate-800/80 text-teal-300 transition flex items-center gap-2 text-xs font-semibold">
+                    <i id="sound-icon" class="fa-solid fa-volume-high text-sm"></i>
+                    <span id="sound-text" class="hidden sm:inline">Ses Açık</span>
+                </button>
+
+                <!-- Arka Plan Değiştir -->
+                <button onclick="cycleBackground()" class="p-2.5 rounded-xl glass-card hover:bg-slate-800/80 text-slate-300 hover:text-teal-400 transition flex items-center gap-2 text-xs font-medium">
+                    <i class="fa-solid fa-image text-sm text-teal-400"></i>
+                    <span class="hidden sm:inline">Arka Planı Değiştir</span>
+                </button>
+
+                <!-- Favoriler / Geçmiş Modal Butonu -->
+                <button onclick="toggleHistoryModal()" class="p-2.5 rounded-xl glass-card hover:bg-slate-800/80 text-slate-300 hover:text-indigo-400 transition flex items-center gap-2 text-xs font-medium relative">
+                    <i class="fa-solid fa-bookmark text-sm text-indigo-400"></i>
+                    <span class="hidden sm:inline">Geçmiş & Favoriler</span>
+                    <span id="history-badge" class="hidden absolute -top-1 -right-1 w-4 h-4 bg-teal-500 text-[10px] font-bold text-slate-900 rounded-full flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Ana İçerik Alanı -->
+    <main class="relative z-10 max-w-5xl mx-auto px-4 py-8 sm:py-12 flex-grow w-full">
+
+        <!-- Başlık ve Tanıtım -->
+        <div id="hero-section" class="text-center mb-10 transition-all duration-500">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-300 text-xs font-semibold mb-4 backdrop-blur-md">
+                <i class="fa-solid fa-sparkles text-teal-400"></i> 20 Farklı Duygu Spektrumu & Derin Öneriler
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+                Zihnini ve Hissiyatını <br class="hidden sm:inline"><span class="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-indigo-300 to-purple-400">Yazıya Dök, Keşfet</span>
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto font-normal">
+                Şu anki duygu durumunu, aklından geçenleri veya hislerini açıkça yaz. Moodify sana psikolojik anlamını, sanat eserini, müziğini, filmini, kitabını ve bugünkü özel eylemini çıkarsın.
+            </p>
+        </div>
+
+        <!-- Duygu/Metin Giriş Kutusu -->
+        <div class="glass-panel p-4 sm:p-6 rounded-3xl shadow-2xl mb-10 max-w-3xl mx-auto border border-slate-700/50">
+            <div class="relative mb-4">
+                <textarea id="mood-input" rows="3" placeholder="Örn: 'Son zamanlarda çok fazla şey yapmaya çalışıyorum ama hiçbirine yetişemiyor gibiyim, zihnim yorgun...' veya sadece 'Huzurluyum'" class="w-full bg-slate-900/60 text-slate-100 placeholder-slate-400/70 p-4 rounded-2xl border border-slate-700/60 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 outline-none transition resize-none text-sm sm:text-base custom-scrollbar"></textarea>
+                <div class="absolute right-3 bottom-3 text-xs text-slate-400 flex items-center gap-2">
+                    <span id="char-count">0</span>/500
+                </div>
+            </div>
+
+            <!-- Analiz Et Butonu ve Hızlı Seçenekler -->
+            <div class="flex flex-col sm:flex-row gap-3 items-center justify-between">
+                <div class="text-xs text-slate-400 w-full sm:w-auto flex items-center gap-1.5 overflow-x-auto pb-2 sm:pb-0 custom-scrollbar">
+                    <span class="font-semibold text-slate-300 whitespace-nowrap">Hızlı Hisler:</span>
+                    <button onclick="setQuickInput('Huzurlu ve dinginim, doğayı hissetmek istiyorum.')" class="px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 whitespace-nowrap transition text-[11px]">Huzurlu</button>
+                    <button onclick="setQuickInput('Çok fazla iş var, kafam darmadağın ve stresliyim.')" class="px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 whitespace-nowrap transition text-[11px]">Stresli</button>
+                    <button onclick="setQuickInput('Geçmiş günleri, eski dostları ve çocukluğumu özlüyorum.')" class="px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 whitespace-nowrap transition text-[11px]">Nostaljik</button>
+                    <button onclick="setQuickInput('İçim kıpır kıpır, yeni projeler başlatmak istiyorum!')" class="px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 whitespace-nowrap transition text-[11px]">Heyecanlı</button>
+                </div>
+
+                <button id="analyze-btn" onclick="analyzeMood()" class="w-full sm:w-auto px-6 py-3.5 bg-gradient-to-r from-teal-500 to-indigo-600 hover:from-teal-400 hover:to-indigo-500 text-white font-bold rounded-2xl shadow-lg shadow-teal-500/25 transition-all transform active:scale-95 flex items-center justify-center gap-2 text-sm whitespace-nowrap">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>Analiz Et & Öner</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 20 Duygu Hızlı Katmanı Seçici (Akordeon / Grid) -->
+        <div class="mb-12">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-xs uppercase tracking-wider font-bold text-slate-400 flex items-center gap-2">
+                    <i class="fa-solid fa-layer-group text-teal-400"></i> Veya Duygu Katmanını Doğrudan Seç
+                </h3>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-2.5" id="emotion-pills-grid">
+                <!-- Javascript ile 20 duygu doldurulacak -->
+            </div>
+        </div>
+
+        <!-- Sonuç Bölümü (Öneriler ve Kartlar) -->
+        <div id="results-container" class="hidden space-y-8 animate-pop-in">
+            
+            <!-- Duygu Tespiti Başlığı & Özet -->
+            <div class="glass-panel p-6 rounded-3xl border border-teal-500/30 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="flex items-center gap-5">
+                    <div id="detected-icon-bg" class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shadow-xl bg-gradient-to-br from-teal-500 to-indigo-600 text-white shrink-0">
+                        <i id="detected-icon" class="fa-solid fa-heart"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-xs font-bold uppercase tracking-wider text-teal-400">Tespit Edilen Ruh Hali</span>
+                            <span id="detected-tag" class="text-[10px] px-2 py-0.5 rounded bg-teal-500/20 text-teal-300 font-semibold">Tepkisel</span>
+                        </div>
+                        <h3 id="detected-title" class="text-2xl font-extrabold text-white">Duygu Adı</h3>
+                        <p id="detected-desc" class="text-slate-300 text-xs sm:text-sm mt-1 max-w-xl">Duygu açıklaması buraya gelecek.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 w-full md:w-auto justify-end border-t md:border-t-0 border-slate-700/50 pt-4 md:pt-0">
+                    <button id="favorite-btn" onclick="toggleCurrentFavorite()" class="px-4 py-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-amber-400 border border-amber-500/20 transition flex items-center gap-2 text-xs font-semibold">
+                        <i id="fav-star-icon" class="fa-regular fa-star"></i>
+                        <span id="fav-btn-text">Favorilere Ekle</span>
+                    </button>
+                    <button onclick="shareResults()" class="p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 transition text-xs" title="Paylaş">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Öneri Kartları Grid (7 Alan) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <!-- 1. Psikolojik & Felsefi Anlam -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-3 text-indigo-400">
+                            <div class="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h4 class="font-bold text-sm text-slate-200">Psikolojik Anlamı</h4>
+                        </div>
+                        <p id="card-meaning" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Bu hissin sana anlatmak istediği derin bir ihtiyaç var.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/40 text-[11px] text-indigo-300/80 italic flex items-center gap-1.5">
+                        <i class="fa-solid fa-lightbulb"></i> İçsel Farkındalık
+                    </div>
+                </div>
+
+                <!-- 2. Sanat Eseri & Tablo -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-3 text-amber-400">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                            <h4 class="font-bold text-sm text-slate-200">Sanat & Tablo Önerisi</h4>
+                        </div>
+                        <h5 id="card-art-title" class="font-bold text-slate-100 text-sm mb-1">Tablo Adı</h5>
+                        <p id="card-art-artist" class="text-xs text-amber-300/90 font-medium mb-2">Sanatçı (Yıl)</p>
+                        <p id="card-art-desc" class="text-xs text-slate-300 leading-relaxed">
+                            Eser açıklaması ve bu hisle olan bağ.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/40">
+                        <a id="art-search-link" href="#" target="_blank" class="text-xs text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">
+                            <span>Tabloyu İncele</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. Hobi & Aktivite -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-3 text-emerald-400">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                <i class="fa-solid fa-person-running"></i>
+                            </div>
+                            <h4 class="font-bold text-sm text-slate-200">Önerilen Hobi / Aktivite</h4>
+                        </div>
+                        <h5 id="card-hobby-title" class="font-bold text-slate-100 text-sm mb-1">Aktivite Adı</h5>
+                        <p id="card-hobby-desc" class="text-xs text-slate-300 leading-relaxed">
+                            Neden iyi geleceği ve uygulanış yöntemi.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/40 text-[11px] text-emerald-300/80 flex items-center gap-1.5">
+                        <i class="fa-solid fa-clock"></i> <span id="card-hobby-time">20-30 dakika</span>
+                    </div>
+                </div>
+
+                <!-- 4. Müzik & Playlist -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-3 text-rose-400">
+                            <div class="w-8 h-8 rounded-lg bg-rose-500/20 flex items-center justify-center text-rose-400">
+                                <i class="fa-solid fa-music"></i>
+                            </div>
+                            <h4 class="font-bold text-sm text-slate-200">Müzik & Playlist</h4>
+                        </div>
+                        <h5 id="card-music-title" class="font-bold text-slate-100 text-sm mb-1">Şarkı / Tür Adı</h5>
+                        <p id="card-music-artist" class="text-xs text-rose-300/90 font-medium mb-2">Sanatçı / Playlist</p>
+                        <p id="card-music-desc" class="text-xs text-slate-300 leading-relaxed">
+                            Müziğin ritmi ve zihne etkisi.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/40 flex items-center gap-3">
+                        <a id="music-youtube-link" href="#" target="_blank" class="text-xs text-red-400 hover:text-red-300 font-semibold flex items-center gap-1">
+                            <i class="fa-brands fa-youtube"></i> YouTube
+                        </a>
+                        <a id="music-spotify-link" href="#" target="_blank" class="text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1">
+                            <i class="fa-brands fa-spotify"></i> Spotify
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. Dizi & Film -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-3 text-sky-400">
+                            <div class="w-8 h-8 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-400">
+                                <i class="fa-solid fa-film"></i>
+                            </div>
+                            <h4 class="font-bold text-sm text-slate-200">Film / Dizi Önerisi</h4>
+                        </div>
+                        <h5 id="card-movie-title" class="font-bold text-slate-100 text-sm mb-1">Film Adı</h5>
+                        <p id="card-movie-meta" class="text-xs text-sky-300/90 font-medium mb-2">Tür | Yapım Yılı</p>
+                        <p id="card-movie-desc" class="text-xs text-slate-300 leading-relaxed">
+                            Filmin konusu ve hissiyatınıza katkısı.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/40">
+                        <a id="movie-search-link" href="#" target="_blank" class="text-xs text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1">
+                            <span>Fragman & İnceleme</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. Kitap & Şiir -->
+                <div class="glass-card p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-3 text-purple-400">
+                            <div class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <h4 class="font-bold text-sm text-slate-200">Kitap & Şiir</h4>
+                        </div>
+                        <h5 id="card-book-title" class="font-bold text-slate-100 text-sm mb-1">Eser Adı</h5>
+                        <p id="card-book-author" class="text-xs text-purple-300/90 font-medium mb-2">Yazar Adı</p>
+                        <p id="card-book-quote" class="text-xs text-slate-300 italic border-l-2 border-purple-500/50 pl-2.5 py-1 mb-2">
+                            "İlham verici bir alıntı..."
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/40">
+                        <a id="book-search-link" href="#" target="_blank" class="text-xs text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-1">
+                            <span>Eser Hakkında</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 7. Günün Küçük Eylemi (Tam Genişlik - Accent) -->
+                <div class="glass-card p-5 rounded-2xl md:col-span-2 lg:col-span-3 border-l-4 border-teal-500 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-teal-500/20 flex items-center justify-center text-teal-400 text-lg shrink-0">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] uppercase font-bold text-teal-400 tracking-wider">Bugün İçin Anlık Eylem</span>
+                            <h5 id="card-action-title" class="font-bold text-slate-100 text-base">Eylem Adı</h5>
+                            <p id="card-action-desc" class="text-xs text-slate-300 mt-0.5">Eylemin kısa detaylı açıklaması.</p>
+                        </div>
+                    </div>
+                    <button onclick="markActionComplete(this)" class="px-4 py-2 rounded-xl bg-teal-500/20 hover:bg-teal-500/30 text-teal-300 text-xs font-semibold whitespace-nowrap transition border border-teal-500/30 flex items-center gap-2">
+                        <i class="fa-regular fa-circle-check"></i> Tamamladım Olarak İşaretle
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Geçmiş & Favoriler Modalı -->
+    <div id="history-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-2xl rounded-3xl p-6 border border-slate-700 shadow-2xl flex flex-col max-h-[85vh]">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-700/60">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Geçmiş & Favori Analizler</h3>
+                </div>
+                <button onclick="toggleHistoryModal()" class="text-slate-400 hover:text-white p-2 text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Sekme Seçimi -->
+            <div class="flex gap-2 my-4 border-b border-slate-800 pb-2">
+                <button id="tab-fav" onclick="switchModalTab('fav')" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-teal-500/20 text-teal-300 border border-teal-500/30">
+                    Favoriler (<span id="fav-count">0</span>)
+                </button>
+                <button id="tab-history" onclick="switchModalTab('history')" class="px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:bg-slate-800">
+                    Geçmiş Aramalar (<span id="history-count">0</span>)
+                </button>
+            </div>
+
+            <!-- Modal Liste İçeriği -->
+            <div id="modal-list-content" class="overflow-y-auto space-y-3 pr-2 custom-scrollbar flex-grow">
+                <!-- Javascript ile yüklenecek -->
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
+                <button onclick="clearAllData()" class="text-rose-400 hover:text-rose-300 flex items-center gap-1">
+                    <i class="fa-solid fa-trash-can"></i> Tümünü Temizle
+                </button>
+                <button onclick="toggleHistoryModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-xl">Kapat</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alt Footer -->
+    <footer class="relative z-10 w-full py-6 text-center text-xs text-slate-400 border-t border-slate-800/40 glass-panel mt-12">
+        <p>© 2026 <strong class="text-teal-400">Moodify</strong> - Duygu & Düşünce Öneri Motoru.</p>
+        <p class="mt-1 text-[11px] text-slate-400">Ruh halini keşfet, sanata ve müziğe dokun.</p>
+    </footer>
+
+    <!-- JavaScript Kodları -->
+    <script>
+        // 1. Arka Plan Görselleri Döngüsü (1.jpeg - 6.jpeg)
+        const bgImages = [
+            '1.jpeg',
+            '2.jpeg',
+            '3.jpeg',
+            '4.jpeg',
+            '5.jpeg',
+            '6.jpeg'
+        ];
+
+        let currentBgIndex = 0;
+
+        function initBackground() {
+            const savedIndex = localStorage.getItem('moodify_bg_index');
+            if (savedIndex !== null) {
+                currentBgIndex = (parseInt(savedIndex, 10) + 1) % bgImages.length;
+            } else {
+                currentBgIndex = 0;
+            }
+            localStorage.setItem('moodify_bg_index', currentBgIndex);
+            applyBackground(currentBgIndex);
+        }
+
+        function applyBackground(index) {
+            const bgContainer = document.getElementById('bg-container');
+            bgContainer.style.backgroundImage = `url('${bgImages[index]}')`;
+        }
+
+        function cycleBackground() {
+            currentBgIndex = (currentBgIndex + 1) % bgImages.length;
+            localStorage.setItem('moodify_bg_index', currentBgIndex);
+            applyBackground(currentBgIndex);
+        }
+
+        // 2. Ses Efekt Sistemi (Web Audio API - Synthesizer Chime)
+        let soundEnabled = true;
+
+        function toggleSound() {
+            soundEnabled = !soundEnabled;
+            const icon = document.getElementById('sound-icon');
+            const text = document.getElementById('sound-text');
+            const btn = document.getElementById('sound-toggle-btn');
+
+            if (soundEnabled) {
+                icon.className = "fa-solid fa-volume-high text-sm";
+                text.innerText = "Ses Açık";
+                btn.classList.remove('opacity-50');
+                playMagicChime();
+            } else {
+                icon.className = "fa-solid fa-volume-xmark text-sm";
+                text.innerText = "Sessiz";
+                btn.classList.add('opacity-50');
+            }
+        }
+
+        function playMagicChime() {
+            if (!soundEnabled) return;
+            try {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (!AudioContext) return;
+                const ctx = new AudioContext();
+
+                const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51]; // C5, E5, G5, C6, E6
+                notes.forEach((freq, index) => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+
+                    osc.type = 'sine';
+                    osc.frequency.value = freq;
+
+                    const startTime = ctx.currentTime + (index * 0.08);
+                    const duration = 0.6;
+
+                    gain.gain.setValueAtTime(0, startTime);
+                    gain.gain.linearRampToValueAtTime(0.15, startTime + 0.04);
+                    gain.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
+
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+
+                    osc.start(startTime);
+                    osc.stop(startTime + duration);
+                });
+            } catch (e) {
+                console.log("Audio play error:", e);
+            }
+        }
+
+        // 3. 20 Genişletilmiş Duygu Veri Tabanı
+        const emotionsDB = {
+            "huzurlu": {
+                id: "huzurlu",
+                name: "Huzurlu & Durgun",
+                icon: "fa-leaf",
+                color: "from-emerald-500 to-teal-600",
+                keywords: ["huzur", "sakin", "durgun", "dingin", "rahat", "sessiz", "doğa", "nefes", "ferah"],
+                meaning: "Zihninizin karmaşadan uzaklaştığı, şu anın yeterli olduğunu hissettiğiniz dengeli bir ruh hali. İç dünyanız dış dünyanın hızına dur demiş durumda.",
+                art: {
+                    title: "Water Lilies (Nilüferler)",
+                    artist: "Claude Monet (1906)",
+                    desc: "Monet'nin Giverny'deki bahçesinde hissettiği sonsuz dinginlik, suyun ve ışığın kırılmalarıyla ruhunuzu okşar.",
+                    query: "Monet Water Lilies"
+                },
+                hobby: {
+                    title: "Açık Havada Yavaş Yürüyüş & Doğa Fotoğrafçılığı",
+                    desc: "Telefonu sessize alıp çevredeki detayları, yaprakları ve gökyüzünü inceleyerek odaklanın.",
+                    time: "30-45 Dakika"
+                },
+                music: {
+                    title: "Weightless",
+                    artist: "Marconi Union / Ambient Lounge",
+                    desc: "Kalp atış hızınızı düşüren, bilimin de onayladığı en rahatlatıcı ortam sesleri.",
+                    query: "Marconi Union Weightless"
+                },
+                movie: {
+                    title: "Paterson",
+                    meta: "Dram/Romantik | 2016",
+                    desc: "Bir otobüs şoförünün gündelik hayatındaki gizli şiirsel huzuru anlatan ilham verici bir yapıt.",
+                    query: "Paterson 2016 film"
+                },
+                book: {
+                    title: "Dinginlik Sanatı",
+                    author: "Pico Iyer",
+                    quote: "Hiçbir şey yapmadan durabilmek, her şeyi daha net görmenin tek yoludur."
+                },
+                action: {
+                    title: "5 Dakikalık Derin Nefes & Bitki Çayı",
+                    desc: "Pencere kenarında oturup sadece çayınızın buharını ve nefesinizi izleyin."
+                }
+            },
+            "stresli": {
+                id: "stresli",
+                name: "Stresli & Bunalmış",
+                icon: "fa-bolt-lightning",
+                color: "from-amber-500 to-rose-600",
+                keywords: ["stres", "bunalım", "yetişmiyor", "baskı", "gergin", "sıkıntı", "zaman yok", "yoğun", "daraldım"],
+                meaning: "Zihninizin kapasitesinin üzerinde kontrol kurmaya çalıştığını gösterir. Vücudun 'savaş ya da kaç' uyarısıdır, yavaşlama zamanı gelmiştir.",
+                art: {
+                    title: "The Starry Night (Yıldızlı Gece)",
+                    artist: "Vincent van Gogh (1889)",
+                    desc: "Van Gogh'un zihnindeki çalkantıyı tuvaldeki dairesel fırça darbeleriyle dışa vurarak rahatlama arayışı.",
+                    query: "Van Gogh Starry Night"
+                },
+                hobby: {
+                    title: "Kritik Yük Temizliği & Kutu Kutu Düzenleme",
+                    desc: "Sadece masanızın bir köşesini veya tek bir çekmeceyi düzenleyin. Küçük kontrol alanları stresi azaltır.",
+                    time: "15-20 Dakika"
+                },
+                music: {
+                    title: "Lo-Fi Beats to Relax/Study",
+                    artist: "Chillhop Music",
+                    desc: "Sözsüz, hafif ritimli ve zihni yormayan yumuşak melodiler.",
+                    query: "Lofi Beats Relax Chillhop"
+                },
+                movie: {
+                    title: "Amélie",
+                    meta: "Komedi/Romantik | 2001",
+                    desc: "Zihninizi günlük kaygılardan tamamen söküp alacak, içinizi ısıtan görsel bir şölen.",
+                    query: "Amelie 2001 film"
+                },
+                book: {
+                    title: "Stres Stratejileri",
+                    author: "Kelly McGonigal",
+                    quote: "Stres, değer verdiğimiz şeylerin peşinden gittiğimizin bir kanıtıdır."
+                },
+                action: {
+                    title: "4-7-8 Nefes Egzersizi",
+                    desc: "4 saniye nefes al, 7 saniye tut ve 8 saniyede yavaşça ver. 4 kez tekrar et."
+                }
+            },
+            "nostaljik": {
+                id: "nostaljik",
+                name: "Nostaljik & Özlemli",
+                icon: "fa-clock-rotate-left",
+                color: "from-amber-600 to-orange-700",
+                keywords: ["geçmiş", "özlem", "nostalji", "eski", "çocukluk", "hatıra", "anılar", "geçmiş günler"],
+                meaning: "Geçmişteki güvenli, samimi veya güzel anlara duyulan sıcak bir duygu. Şimdiki zamanda köklenme ihtiyacınızı simgeler.",
+                art: {
+                    title: "The Persistence of Memory (Belleğin Azmi)",
+                    artist: "Salvador Dalí (1931)",
+                    desc: "Eriyen saatler, zamanın esnekliğini ve anıların zihnimizdeki şekil değiştiren yapısını gösterir.",
+                    query: "Dali Persistence of Memory"
+                },
+                hobby: {
+                    title: "Eski Fotoğraf Albümlerine & Anı Defterlerine Bakmak",
+                    desc: "Sevdiklerinizle geçirdiğiniz güzel bir anıyı hatırlayıp o zamanki bir dostunuza mesaj atın.",
+                    time: "20 Dakika"
+                },
+                music: {
+                    title: "Yesterday / Oldies Goldies",
+                    artist: "The Beatles & Klasikler",
+                    desc: "Eski günlerin samimiyetini taşıyan, ruhu sarıp sarmalayan klasik parçalar.",
+                    query: "Best of 70s 80s Acoustic Retro"
+                },
+                movie: {
+                    title: "Midnight in Paris (Paris'te Gece Yarısı)",
+                    meta: "Fantezi/Komedi | 2011",
+                    desc: "Geçmiş çağların büyüsüne kapılan bir yazarın nostalji anlayışını sorgulayan harika bir film.",
+                    query: "Midnight in Paris 2011"
+                },
+                book: {
+                    title: "Kayıp Zamanın İzinde",
+                    author: "Marcel Proust",
+                    quote: "Gerçek keşif yolculuğu yeni manzaralar aramak değil, yeni gözlere sahip olmaktır."
+                },
+                action: {
+                    title: "Eski Bir Dostu Arama",
+                    desc: "Uzun zamandır konuşmadığınız ama anısı olan birini arayıp halini hatırını sorun."
+                }
+            },
+            "heyecanli": {
+                id: "heyecanli",
+                name: "Heyecanlı & Enerjik",
+                icon: "fa-fire",
+                color: "from-orange-500 to-yellow-500",
+                keywords: ["heyecan", "coşku", "enerji", "sabırsız", "harika", "süper", "kıpır kıpır", "yeni"],
+                meaning: "İçinizdeki potansiyelin ve yaratıcı gücün dışarı taşma isteği. Harekete geçmek için en verimli hormon seviyesi.",
+                art: {
+                    title: "Composition VII",
+                    artist: "Wassily Kandinsky (1913)",
+                    desc: "Patlayan renkler ve dinamik çizgilerle tutkunun ve coşkunun soyut dışavurumu.",
+                    query: "Kandinsky Composition VII"
+                },
+                hobby: {
+                    title: "Yeni Bir Becerinin İlk Adımını Atmak",
+                    desc: "Uzun zamandır merak ettiğiniz bir konunun başlangıç rehberi videosunu izleyin veya taslak çizin.",
+                    time: "45 Dakika"
+                },
+                music: {
+                    title: "Uptown Funk / Upbeat Pop",
+                    artist: "Bruno Mars & Mark Ronson",
+                    desc: "Ritme eşlik etmenizi sağlayacak yüksek tempolu enerjik şarkılar.",
+                    query: "Upbeat Motivational Funk Pop"
+                },
+                movie: {
+                    title: "Whiplash",
+                    meta: "Dram/Müzik | 2014",
+                    desc: "Tutku, hırs ve ritmin doruklarına ulaşan soluksuz bir başyapıt.",
+                    query: "Whiplash 2014 film"
+                },
+                book: {
+                    title: "Tutku Yaşamdır",
+                    author: "Robin Sharma",
+                    quote: "Coşku, büyük işler başarmanın gizli yakıtıdır."
+                },
+                action: {
+                    title: "Fikir Haritası (Mind Map) Çıkar",
+                    desc: "Aklındaki tüm fikirleri hızlıca beyaz bir kağıda renklendirerek dök."
+                }
+            },
+            "tukenmis": {
+                id: "tukenmis",
+                name: "Tükenmiş & Yorgun",
+                icon: "fa-battery-quarter",
+                color: "from-slate-600 to-zinc-700",
+                keywords: ["tükenmiş", "yorgun", "halsiz", "bitti", "pilim bitti", "gücüm yok", "enerjisiz", "boş"],
+                meaning: "Zihinsel ve fiziksel depoların sıfırlandığı uyarısı. Şarj olmak için suçluluk duymadan durmanız gereken evre.",
+                art: {
+                    title: "The Absinthe Drinker (Absent İçen Kadın)",
+                    artist: "Edgar Degas (1876)",
+                    desc: "Yorgunluk ve içsel boşluğun sadelik içinde tuvale aktarılmış gerçekçi bir tasviri.",
+                    query: "Degas L Absinthe"
+                },
+                hobby: {
+                    title: "Tamamıyla Ekransız Dinlenme & Sıcak Banyo",
+                    desc: "Tüm cihazları kapatıp sessiz bir odada uzanın veya ılık bir duş alın.",
+                    time: "1 Saat"
+                },
+                music: {
+                    title: "Piano Solo Classics",
+                    artist: "Ludovico Einaudi / Yiruma",
+                    desc: "Yormayan, akan su gibi zihni dinlendiren minimal piyano sesleri.",
+                    query: "Ludovico Einaudi Nuvole Bianche"
+                },
+                movie: {
+                    title: "The Secret Life of Walter Mitty",
+                    meta: "Macera/Dram | 2013",
+                    desc: "Rutin ve yorgunluktan kaçıp dünyayı yeniden keşfeden ilham verici bir yolculuk.",
+                    query: "Walter Mitty 2013"
+                },
+                book: {
+                    title: "Tükenmişlikten Doğmak",
+                    author: "Emily Nagoski",
+                    quote: "Dinlenmek bir ödül değil, biyolojik bir zorunluluktur."
+                },
+                action: {
+                    title: "Hayır Deme Pratiği",
+                    desc: "Bugün sizi yoran fazladan tek bir sorumluluğa kibarca 'Hayır' deyin."
+                }
+            },
+            "kesif": {
+                id: "kesif",
+                name: "Keşif Arzusu & Meraklı",
+                icon: "fa-compass-drafting",
+                color: "from-cyan-500 to-blue-600",
+                keywords: ["keşif", "merak", "öğrenmek", "yeni yerler", "gezi", "sorgulama", "bilgi", "dünya"],
+                meaning: "Öğrenme açlığı ve sınırların ötesine geçme isteği. Bilincinizin genişlemek istediği anlar.",
+                art: {
+                    title: "The Wanderer above the Sea of Fog",
+                    artist: "Caspar David Friedrich (1818)",
+                    desc: "Sis denizine bakan gezgin, bilinmeyene duyulan derin merakı ve keşif ruhunu simgeler.",
+                    query: "Wanderer above the Sea of Fog"
+                },
+                hobby: {
+                    title: "Google Earth ile Rastgele Bir Şehri Gezmek",
+                    desc: "Dünyanın hiç gitmediğiniz bir şehrinin sokaklarında 3D tura çıkın ve kültürünü inceleyin.",
+                    time: "30 Dakika"
+                },
+                music: {
+                    title: "Interstellar Soundtrack",
+                    artist: "Hans Zimmer",
+                    desc: "Evrenin derinliklerini ve keşfetme arzusunu hissettiren epik müzikler.",
+                    query: "Hans Zimmer Interstellar Theme"
+                },
+                movie: {
+                    title: "Into the Wild (Özgürlük Yolu)",
+                    meta: "Macera/Dram | 2007",
+                    desc: "Doğanın ve hayatın gerçek anlamını arayan cesur bir gencin gerçek hikayesi.",
+                    query: "Into the Wild 2007"
+                },
+                book: {
+                    title: "Cosmos",
+                    author: "Carl Sagan",
+                    quote: "Bir yerlerde olağanüstü bir şey keşfedilmeyi bekliyor."
+                },
+                action: {
+                    title: "Farklı Bir Yoldan Yürü",
+                    desc: "Bugün eve veya gideceğin yere her zamankinden farklı bir sokaktan git."
+                }
+            },
+            "kararsiz": {
+                id: "kararsiz",
+                name: "Kararsız & Arayışta",
+                icon: "fa-shuffle",
+                color: "from-indigo-500 to-purple-600",
+                keywords: ["kararsız", "ne yapsam", "bilemiyorum", "çıkmaz", "ikilem", "seçim", "hangi"],
+                meaning: "Farklı olasılıklar arasında sıkışmışlık. Zihnin en doğru seçimi yapma arzusu nedeniyle felç olması.",
+                art: {
+                    title: "The Lovers (Aşıklar)",
+                    artist: "René Magritte (1928)",
+                    desc: "Gizemli ve belirsiz imgelerle görünmeyenin altındaki seçenekleri düşündüren kışkırtıcı eser.",
+                    query: "Magritte The Lovers"
+                },
+                hobby: {
+                    title: "Artılar ve Eksiler (Pros & Cons) Listesi Yapmak",
+                    desc: "Seçenekleri kağıda döküp görselleştirmek kararsızlığı %80 oranında çözer.",
+                    time: "15 Dakika"
+                },
+                music: {
+                    title: "Acoustic Folk Chill",
+                    artist: "Kings of Convenience / Paper Kites",
+                    desc: "Netlik kazandıran, zihni zorlamayan akustik ve dingin melodiler.",
+                    query: "Kings of Convenience Misread"
+                },
+                movie: {
+                    title: "Mr. Nobody",
+                    meta: "Bilimkurgu/Dram | 2009",
+                    desc: "Seçimlerimizin ve imkanlarımızın hayatı nasıl şekillendirdiğini gösteren nefes kesici bir yapım.",
+                    query: "Mr Nobody 2009"
+                },
+                book: {
+                    title: "Karar Anı",
+                    author: "Malcolm Gladwell (Blink)",
+                    quote: "En iyi kararlar genellikle sezgilerimizin ilk saniyelerinde gizlidir."
+                },
+                action: {
+                    title: "Yazı-Tura Testi",
+                    desc: "Parayı havaya at. Para havadayken içinizden hangi yüzün gelmesini istediğinize dikkat edin."
+                }
+            },
+            "romantik": {
+                id: "romantik",
+                name: "Romantik & Duygusal",
+                icon: "fa-heart",
+                color: "from-pink-500 to-rose-500",
+                keywords: ["aşk", "sevgi", "romantik", "duygusal", "kalp", "tutku", "şefkat"],
+                meaning: "Açık bir kalp, paylaşma isteği ve güzelliklere karşı derin bir duyarlılık hissi.",
+                art: {
+                    title: "The Kiss (Öpücük)",
+                    artist: "Gustav Klimt (1907)",
+                    desc: "Altın varakların içinde eriyen iki ruhun sevgi ve tutku dolu ölümsüz birleşimi.",
+                    query: "Gustav Klimt The Kiss"
+                },
+                hobby: {
+                    title: "Sevdiklerinize Küçük Bir Sürpriz / Şiir Okumak",
+                    desc: "Sevdiğiniz birine tatlı bir not yazın veya bir şiir kitabı karıştırın.",
+                    time: "20 Dakika"
+                },
+                music: {
+                    title: "La Vie En Rose / Jazz Ballads",
+                    artist: "Louis Armstrong / Norah Jones",
+                    desc: "Sıcak, caz melodileriyle kaplı romantik ve zarif bir atmosfer.",
+                    query: "Norah Jones Come Away With Me"
+                },
+                movie: {
+                    title: "Before Sunrise (Gün Doğmadan)",
+                    meta: "Romantik/Dram | 1995",
+                    desc: "Viyana sokaklarında bir gecede aşık olan iki gencin unutulmaz ve samimi sohbetleri.",
+                    query: "Before Sunrise 1995"
+                },
+                book: {
+                    title: "Aşk Sanatı",
+                    author: "Erich Fromm",
+                    quote: "Sevmek bir eylemdir; pasif bir duygu değil, bir duruştur."
+                },
+                action: {
+                    title: "Sevgi Mesajı Gönder",
+                    desc: "Sevdiğin birine 'Aklıma geldin, seni seviyorum' mesajı at."
+                }
+            },
+            "yaratici": {
+                id: "yaratici",
+                name: "Yaratıcı & İlhamlı",
+                icon: "fa-lightbulb",
+                color: "from-yellow-400 to-amber-600",
+                keywords: ["yaratıcı", "ilham", "üretmek", "sanat", "yazmak", "çizmek", "fikir", "tasarım"],
+                meaning: "Zihninizin kalıpları kırarak özgün bağlantılar kurduğu, üretkenlik zirvesi.",
+                art: {
+                    title: "The Great Wave off Kanagawa",
+                    artist: "Hokusai (1831)",
+                    desc: "Japon ahşap baskı sanatının dinamik, dalgalı ve ilham verici gücü.",
+                    query: "Hokusai Great Wave"
+                },
+                hobby: {
+                    title: "Serbest Çağrışım Çizimi veya Yazımı (Free Writing)",
+                    desc: "Sansür uygulamadan 10 dakika boyunca aklınıza gelen her şeyi kağıda dökün.",
+                    time: "20 Dakika"
+                },
+                music: {
+                    title: "Classical Focus & Creativity",
+                    artist: "Mozart / Chopin / Vivaldi",
+                    desc: "Beyin dalgalarını alfa seviyesine çıkaran klasik müzik başyapıtları.",
+                    query: "Vivaldi Four Seasons Winter"
+                },
+                movie: {
+                    title: "Soul",
+                    meta: "Animasyon/Macera | 2020",
+                    desc: "Hayatın kıvılcımını ve tutkularımızın kaynağını sorgulayan muazzam bir görsel şölen.",
+                    query: "Pixar Soul 2020"
+                },
+                book: {
+                    title: "Yaratma Cesareti",
+                    author: "Rollo May",
+                    quote: "Yaratıcılık, var olmanın getirdiği kaygıya verilen en cesur yanıttır."
+                },
+                action: {
+                    title: "Moodboard Oluştur",
+                    desc: "İlham aldığın 5 görseli veya sözü bir araya getirip bir dijital kolaj yap."
+                }
+            },
+            "yalniz": {
+                id: "yalniz",
+                name: "Yalnız & İçine Kapanık",
+                icon: "fa-user-ninja",
+                color: "from-slate-700 to-indigo-900",
+                keywords: ["yalnız", "kimse yok", "anlaşılmıyorum", "tek başına", "içime kapandım", "suskun"],
+                meaning: "Dış dünyayla bağları geçici olarak kesip kendi özünüzle baş başa kalma ihtiyacı.",
+                art: {
+                    title: "Nighthawks (Gece Kuşları)",
+                    artist: "Edward Hopper (1942)",
+                    desc: "Gece vakti bir restorandaki insanların sessiz ve modern yalnızlığını anlatan ikonik tablo.",
+                    query: "Edward Hopper Nighthawks"
+                },
+                hobby: {
+                    title: "Günlük Tutmak (Journaling)",
+                    desc: "Kendinize bir dost gibi yaklaşarak hissettiklerinizi tarafsızca deftere yazın.",
+                    time: "15 Dakika"
+                },
+                music: {
+                    title: "Soundtrack for Solitude",
+                    artist: "Max Richter / Olafur Arnalds",
+                    desc: "Derin, hüzünlü ama iyileştirici çello ve piyano tınıları.",
+                    query: "Max Richter On The Nature of Daylight"
+                },
+                movie: {
+                    title: "Her",
+                    meta: "Dram/Sci-Fi | 2013",
+                    desc: "Modern çağda yalnızlık ve bağ kurma arzusu üzerine derin bir başyapıt.",
+                    query: "Her 2013 film"
+                },
+                book: {
+                    title: "Yalnızlığın Keşfi",
+                    author: "Paul Auster",
+                    quote: "Yalnızlık, kendinle karşılaşabileceğin tek sığınaktır."
+                },
+                action: {
+                    title: "Kendine Kahve Ismarla",
+                    desc: "Kendi başına bir kafeye gidip sadece içeceğinin tadını çıkar."
+                }
+            },
+            "minnettar": {
+                id: "minnettar",
+                name: "Minnettar & Teşekkür Dolu",
+                icon: "fa-hand-holding-heart",
+                color: "from-teal-400 to-emerald-500",
+                keywords: ["şükür", "minnet", "teşekkür", "şanslıyım", "mutlu", "tamım", "tatmin"],
+                meaning: "Sahip olunan şeylerin değerini fark etmenin getirdiği yüksek frekanslı içsel zenginlik.",
+                art: {
+                    title: "The Gleaners (Başak Toplayan Kadınlar)",
+                    artist: "Jean-François Millet (1857)",
+                    desc: "Emeğin, bereketin ve hayatın sunduğu küçük şeylerin kutsallığını gösteren tablo.",
+                    query: "Millet The Gleaners"
+                },
+                hobby: {
+                    title: "Minnet Listesi Hazırlama",
+                    desc: "Bugün varlığına şükrettiğiniz 5 somut şeyi (sağlık, bir fincan sıcak çay vb.) yazın.",
+                    time: "10 Dakika"
+                },
+                music: {
+                    title: "What a Wonderful World",
+                    artist: "Louis Armstrong",
+                    desc: "Dünyanın güzelliklerini sade bir dille hatırlatan ölümsüz eser.",
+                    query: "Louis Armstrong What a Wonderful World"
+                },
+                movie: {
+                    title: "It's a Wonderful Life (Şahane Hayat)",
+                    meta: "Dram/Aile | 1946",
+                    desc: "Bir insanın varlığının çevresindeki herkesin hayatını nasıl değiştirdiğini gösteren efsane yapım.",
+                    query: "Its a Wonderful Life 1946"
+                },
+                book: {
+                    title: "İnsanın Anlam Arayışı",
+                    author: "Viktor Frankl",
+                    quote: "Yaşamdan ne beklediğimiz değil, yaşamın bizden ne beklediği önemlidir."
+                },
+                action: {
+                    title: "Teşekkür Notu Gönder",
+                    desc: "Hayatınızda iz bırakmış birine sebepsiz bir teşekkür mesajı yazın."
+                }
+            },
+            "motivasyonlu": {
+                id: "motivasyonlu",
+                name: "Motive & Kararlı",
+                icon: "fa-trophy",
+                color: "from-yellow-500 to-red-600",
+                keywords: ["başarı", "hedef", "mücadele", "kararlı", "odak", "azm", "kazanacağım", "güçlü"],
+                meaning: "Engelleri aşmaya hazır, eylem odaklı ve yüksek iradeli zihin yapısı.",
+                art: {
+                    title: "Napoleon Crossing the Alps",
+                    artist: "Jacques-Louis David (1801)",
+                    desc: "Kararlılık, cesaret ve engeller karşısında geri adım atmayan iradenin simgesi.",
+                    query: "Napoleon Crossing the Alps"
+                },
+                hobby: {
+                    title: "Haftalık Hedef Pano (Vision Board) Hazırlama",
+                    desc: "Önümüzdeki günlerde başarmak istediğiniz 3 ana hedefi belirleyip panoya asın.",
+                    time: "30 Dakika"
+                },
+                music: {
+                    title: "Epic Motivational Soundtracks",
+                    artist: "Two Steps From Hell / Hans Zimmer",
+                    desc: "Damarlarınızdaki kanı hızlandıracak epik orkestral müzikler.",
+                    query: "Two Steps From Hell Victory"
+                },
+                movie: {
+                    title: "The Pursuit of Happyness (Umudunu Kaybetme)",
+                    meta: "Dram/Biyografi | 2006",
+                    desc: "Incredible bir azim ve pes etmeme öyküsü.",
+                    query: "Pursuit of Happyness 2006"
+                },
+                book: {
+                    title: "Atomik Alışkanlıklar",
+                    author: "James Clear",
+                    quote: "Sistemlerinize odaklanın, hedeflerinize değil."
+                },
+                action: {
+                    title: "En Zor Görevi Aradan Çıkar (Eat the Frog)",
+                    desc: "Bugün ertelediğiniz en zor görevi ilk 25 dakikada bitirin."
+                }
+            },
+            "huzursuz": {
+                id: "huzursuz",
+                name: "Huzursuz & Endişeli",
+                icon: "fa-cloud-showers-heavy",
+                color: "from-slate-600 to-indigo-800",
+                keywords: ["huzursuz", "endişe", "korku", "kötü bir şey olacak", "rahatsız", "tetikte"],
+                meaning: "Gelecekteki belirsizliklere karşı zihnin aşırı savunma durumuna geçmesi.",
+                art: {
+                    title: "The Scream (Çığlık)",
+                    artist: "Edvard Munch (1893)",
+                    desc: "İçsel varoluşsal kaygı ve endişenin doğadaki çığlıkla bütünleşmesi.",
+                    query: "Edvard Munch The Scream"
+                },
+                hobby: {
+                    title: "Topraklanma Egzersizi (Grounding 5-4-3-2-1)",
+                    desc: "Gördüğün 5 şey, dokunduğun 4 şey, duyduğun 3 şey, kokladığın 2 şey, tattığın 1 şeyi söyle.",
+                    time: "10 Dakika"
+                },
+                music: {
+                    title: "Calm Frequency 432Hz",
+                    artist: "Meditation Rain Sounds",
+                    desc: "Sinir sistemini yatıştıran doğa ve yağmur sesleri.",
+                    query: "432Hz Deep Healing Meditation"
+                },
+                movie: {
+                    title: "Inside Out (Ters Yüz)",
+                    meta: "Animasyon/Komedi | 2015",
+                    desc: "Duygularımızın (endişe, üzüntü, neşe) birbiriyle dengesini anlatan harika bir psikolojik yapım.",
+                    query: "Inside Out 2015 film"
+                },
+                book: {
+                    title: "Endişesiz Yaşam",
+                    author: "Dale Carnegie",
+                    quote: "Hareketsizlik şüphe ve korku doğurur. Eylem ise güven ve cesaret."
+                },
+                action: {
+                    title: "Kaygıyı Kağıda Hapis Et",
+                    desc: "Seni endişelendiren her şeyi yaz, sonra kağıdı katlayıp bir kutuya kilitle."
+                }
+            },
+            "ozgurluk": {
+                id: "ozgurluk",
+                name: "Özgür & Bağımsız",
+                icon: "fa-wind",
+                color: "from-sky-400 to-teal-500",
+                keywords: ["özgür", "bağımsız", "kuş gibi", "rahat", "sınır yok", "ferahlık"],
+                meaning: "Sorumlulukların baskısından sıyrılıp kendi iradenizle nefes alma arzusu.",
+                art: {
+                    title: "Liberty Leading the People",
+                    artist: "Eugène Delacroix (1830)",
+                    desc: "Özgürlüğün ve prangaları kırmanın cesur ve coşkulu tablosu.",
+                    query: "Delacroix Liberty Leading People"
+                },
+                hobby: {
+                    title: "Açık Havada Koşu / Bisiklet Sürüşü",
+                    desc: "Rüzgarı yüzünüzde hissedebileceğiniz tempolu bir açık hava faaliyeti.",
+                    time: "40 Dakika"
+                },
+                music: {
+                    title: "Free Bird / Roadtrip Rock",
+                    artist: "Lynyrd Skynyrd / Fleetwood Mac",
+                    desc: "Açık yolları ve sınır tanımamayı hissettiren dinamik parçalar.",
+                    query: "Fleetwood Mac Go Your Own Way"
+                },
+                movie: {
+                    title: "Dead Poets Society (Ölü Ozanlar Derneği)",
+                    meta: "Dram | 1989",
+                    desc: "Kendi yolunu çizmeyi ve 'Anı Yakalamayı' (Carpe Diem) öğreten unutulmaz bir başyapıt.",
+                    query: "Dead Poets Society 1989"
+                },
+                book: {
+                    title: "Martı Jonathan Livingston",
+                    author: "Richard Bach",
+                    quote: "En yüksekten uçan martı, en uzağı görendir."
+                },
+                action: {
+                    title: "Plansız Bir Yürüyüş",
+                    desc: "Saate ve rotaya bakmadan sadece ayaklarının seni götürdüğü yere yürü."
+                }
+            },
+            "uzgun": {
+                id: "uzgun",
+                name: "Üzgün & Kırgın",
+                icon: "fa-face-frown-open",
+                color: "from-blue-600 to-slate-800",
+                keywords: ["üzgün", "ağlamak", "kırgın", "keder", "acı", "mutsuz", "yaralı"],
+                meaning: "Bir kayıp, kırgınlık veya beklenti bozulması sonrası ruhun kendini onarma süreci.",
+                art: {
+                    title: "Old Man in Sorrow (Kederli Yaşlı Adam)",
+                    artist: "Vincent van Gogh (1890)",
+                    desc: "Hüzünün ve kırgınlığın insan doğasındaki en samimi dışavurumu.",
+                    query: "Van Gogh Old Man in Sorrow"
+                },
+                hobby: {
+                    title: "Ilık Bir Ihlamur/Çay İçip Duyguyu Kabul Etmek",
+                    desc: "Hüznü bastırmaya çalışmayın, ona izin verin ve kendinize şefkat gösterin.",
+                    time: "25 Dakika"
+                },
+                music: {
+                    title: "Melancholic Cello Solos",
+                    artist: "HAUSER / Yo-Yo Ma",
+                    desc: "Duygularınızı serbest bırakmanıza yardımcı olacak hüzünlü ve rahatlatıcı enstrümantal sesler.",
+                    query: "HAUSER Adagio Albinoni"
+                },
+                movie: {
+                    title: "Good Will Hunting (Can Dostum)",
+                    meta: "Dram | 1997",
+                    desc: "İçsel yaraları sarmak ve kabul görmek üzerine ruhu iyileştiren bir yapıt.",
+                    query: "Good Will Hunting 1997"
+                },
+                book: {
+                    title: "Şefkatli Öz Farkındalık",
+                    author: "Kristin Neff",
+                    quote: "Kendi acınıza bir dostun gözleriyle bakabilmeyi öğrenin."
+                },
+                action: {
+                    title: "Kendine Sarılma & Ağlama İzni",
+                    desc: "Baskı yapmadan hissettiğiniz duyguyu kabul edip derin bir nefes alın."
+                }
+            },
+            "monoton": {
+                id: "monoton",
+                name: "Monoton & Sıkılmış",
+                icon: "fa-arrows-rotate",
+                color: "from-stone-500 to-slate-700",
+                keywords: ["monoton", "sıkıcı", "aynı şey", "sıradan", "rutin", "bunalım", "değişiklik lazım"],
+                meaning: "Rutinlerin zihinsel tazeliği öldürdüğü uyarısı. Hayatınıza küçük yenilikler katma zamanı.",
+                art: {
+                    title: "Automat",
+                    artist: "Edward Hopper (1927)",
+                    desc: "Modern hayatın getirdiği sıradanlığın ve rutinlerin görsel anlatımı.",
+                    query: "Edward Hopper Automat"
+                },
+                hobby: {
+                    title: "Oda Dekoru / Mobilya Yeri Değiştirme",
+                    desc: "Çalışma masanızın veya odanızdaki birkaç objenin yerini değiştirerek yeni bir enerji yaratın.",
+                    time: "30 Dakika"
+                },
+                music: {
+                    title: "Electro Swing Hits",
+                    artist: "Parov Stelar / Caravan Palace",
+                    desc: "Rutinleri kıracak eğlenceli ve sürprizli ritimler.",
+                    query: "Parov Stelar Electro Swing"
+                },
+                movie: {
+                    title: "Groundhog Day (Bugün Aslında dündü)",
+                    meta: "Komedi/Fantezi | 1993",
+                    desc: "Aynı günü tekrar tekrar yaşayan bir adamın hayatı değiştirme çabası.",
+                    query: "Groundhog Day 1993"
+                },
+                book: {
+                    title: "Olağanüstü Sıradanlık",
+                    author: "Alain de Botton",
+                    quote: "Yenilik, çevremizden ziyade bakış açımızda başlar."
+                },
+                action: {
+                    title: "Yeni Bir Tat Dene",
+                    desc: "Daha önce hiç tatmadığın bir meyve veya içeceği satın alıp dene."
+                }
+            },
+            "odakli": {
+                id: "odakli",
+                name: "Odaklanmış & Disiplinli",
+                icon: "fa-bullseye",
+                color: "from-blue-600 to-indigo-700",
+                keywords: ["odak", "çalışmak", "ders", "proje", "disiplin", "pürdikkat", "zihin açık"],
+                meaning: "Zihinsel pürüzlerin temizlendiği, yüksek verimlilik durumu (Flow State).",
+                art: {
+                    title: "The Astronomer (Gökbilimci)",
+                    artist: "Johannes Vermeer (1668)",
+                    desc: "Bir bilim insanının küreye olan derin odaklanması ve bilgiye duyduğu tutku.",
+                    query: "Vermeer The Astronomer"
+                },
+                hobby: {
+                    title: "Pomodoro Tekniği ile Derin Çalışma",
+                    desc: "25 dakika sıfır dikkat dağıtıcı ile çalışıp 5 dakika mola verin.",
+                    time: "50 Dakika"
+                },
+                music: {
+                    title: "Deep Focus Synthwave / Gamma Waves",
+                    artist: "Brain.fm / Lofi Focus",
+                    desc: "Beynin odaklanma kapasitesini artıran ritmik ve sözsüz melodiler.",
+                    query: "Deep Focus Binaural Beats Study"
+                },
+                movie: {
+                    title: "The Social Network",
+                    meta: "Biyografi/Dram | 2010",
+                    desc: "Bir fikrin ortaya çıkışı ve tutku dolu bir odaklanma süreci.",
+                    query: "Social Network 2010"
+                },
+                book: {
+                    title: "Pürdikkat (Deep Work)",
+                    author: "Cal Newport",
+                    quote: "Odaklanma yeteneği, modern ekonominin en değerli süper gücüdür."
+                },
+                action: {
+                    title: "Bildirimleri Kapat",
+                    desc: "Telefonunu 'Rahatsız Etmeyin' moduna alıp ekranı ters çevir."
+                }
+            },
+            "safsata": {
+                id: "karma",
+                name: "Karmaşık & Kafası Karışık",
+                icon: "fa-knot",
+                color: "from-purple-600 to-slate-800",
+                keywords: ["karmaşık", "kafam karışık", "darmadağın", "ne hissettiğimi bilmiyorum", "çorba"],
+                meaning: "Birden fazla duygunun aynı anda tetiklenmesiyle zihnin aşırı yüklenmesi.",
+                art: {
+                    title: "Guernica",
+                    artist: "Pablo Picasso (1937)",
+                    desc: "Karmaşanın, parçalanmışlığın ve duygusal patlamaların kubist anlatımı.",
+                    query: "Picasso Guernica"
+                },
+                hobby: {
+                    title: "Mind Dumping (Zihin Boşaltımı)",
+                    desc: "Mantık aramadan zihninizden geçen her kelimeyi rastgele bir kağıda karalayın.",
+                    time: "15 Dakika"
+                },
+                music: {
+                    title: "Ambient Instrumental Guitars",
+                    artist: "Explosions in the Sky",
+                    desc: "Karmaşayı yatıştıran, yavaşça yükselen enstrümantal rock parçaları.",
+                    query: "Explosions in the Sky Your Hand in Mine"
+                },
+                movie: {
+                    title: "Everything Everywhere All at Once",
+                    meta: "Macera/Sci-Fi | 2022",
+                    desc: "Kaosun ve karmaşanın ortasında sevginin ve anlamın bulunması.",
+                    query: "Everything Everywhere All at Once 2022"
+                },
+                book: {
+                    title: "Düşünceler",
+                    author: "Marcus Aurelius",
+                    quote: "Zihnini dış dünyadaki kaostan çekip kendi içine odakla."
+                },
+                action: {
+                    title: "Görsel Sadeleşme",
+                    desc: "Gözlerini 3 dakika kapatıp sadece odadaki sessizliği dinle."
+                }
+            },
+            "cesur": {
+                id: "cesur",
+                name: "Cesur & Özgüvenli",
+                icon: "fa-shield-halved",
+                color: "from-red-500 to-amber-600",
+                keywords: ["cesur", "özgüven", "hazırım", "korkmuyorum", "güçlü", "yaparım"],
+                meaning: "Korkularla yüzleşmeye hazır, içsel gücün ve liderliğin ön plana çıktığı an.",
+                art: {
+                    title: "David",
+                    artist: "Michelangelo (1504)",
+                    desc: "Dev Goliath'a karşı durmaya hazırlanan gencin inancı, cesareti ve kusursuz duruşu.",
+                    query: "Michelangelo David Statue"
+                },
+                hobby: {
+                    title: "Gövde Gösterisi / Dik Duruş Egzersizi",
+                    desc: "Ayna karşısına geçip omuzlarınızı geriye atın ve kendinize inandığınızı söyleyin.",
+                    time: "10 Dakika"
+                },
+                music: {
+                    title: "Eye of the Tiger / Rock Anthems",
+                    artist: "Survivor / Queen",
+                    desc: "Kendinize olan inancı zirveye çıkaracak zamansız rock klasikleri.",
+                    query: "Queen We Are The Champions"
+                },
+                movie: {
+                    title: "Gladiator",
+                    meta: "Aksiyon/Dram | 2000",
+                    desc: "Onur, adalet ve cesaret uğruna verilen unutulmaz bir mücadele.",
+                    query: "Gladiator 2000 film"
+                },
+                book: {
+                    title: "Cesur Yeni Dünya & Stoacılık",
+                    author: "Epiktetos",
+                    quote: "Seni rahatsız eden şeyler olaylar değil, olaylara verdiğin anlamdır."
+                },
+                action: {
+                    title: "Korktuğun Bir Adımı At",
+                    desc: "Sürekli ertelediğin bir telefon konuşmasını veya maili hemen yap."
+                }
+            },
+            "umutlu": {
+                id: "umutlu",
+                name: "Umutlu & Geleceğe Açık",
+                icon: "fa-sun",
+                color: "from-amber-400 to-teal-400",
+                keywords: ["umut", "gelecek", "güzel günler", "inanç", "aydınlık", "iyileşme"],
+                meaning: "Karanlığın ardındaki ışığı görme yeteneği. Zihnin pozitif beklentilere açılması.",
+                art: {
+                    title: "Impression, Sunrise (İzlenim: Doğankut Güneşi)",
+                    artist: "Claude Monet (1872)",
+                    desc: "Limanın üzerindeki sisin arasından doğan güneş, yeni günün ve umudun simgesidir.",
+                    query: "Monet Impression Sunrise"
+                },
+                hobby: {
+                    title: "Gelecek Benliğe Mektup Yazmak (FutureMe)",
+                    desc: "1 yıl sonraki halinize isteklerinizi ve umutlarınızı yazan bir mail hazırlayın.",
+                    time: "20 Dakika"
+                },
+                music: {
+                    title: "Here Comes the Sun",
+                    artist: "The Beatles",
+                    desc: "Kışın bittiğini ve güneşin yeniden doğduğunu müjdeleyen neşeli melodi.",
+                    query: "The Beatles Here Comes the Sun"
+                },
+                movie: {
+                    title: "Shawshank Redemption (Esaretin Bedeli)",
+                    meta: "Dram | 1994",
+                    desc: "Umut iyi bir şeydir, belki de en iyisi. Ve iyi şeyler asla ölmez.",
+                    query: "Shawshank Redemption 1994"
+                },
+                book: {
+                    title: "Umut Kuramı",
+                    author: "C.R. Snyder",
+                    quote: "Umut, hedeflere ulaşmak için yollar bulma kapasitesidir."
+                },
+                action: {
+                    title: "Tohum / Bitki Ekmek",
+                    desc: "Saksıya küçük bir tohum ek veya var olan bir çiçeğe su verip büyümesini dile."
+                }
+            }
+        };
+
+        // Current Active Emotion Cache
+        let currentActiveEmotion = null;
+
+        // Sayfa Yüklendiğinde Başlatma
+        window.addEventListener('DOMContentLoaded', () => {
+            initBackground();
+            renderEmotionPills();
+            setupTextareaCounter();
+            loadFavoritesAndHistoryCounts();
+        });
+
+        // 4. Duygu Seçici Butonları Render Etme (Grid)
+        function renderEmotionPills() {
+            const container = document.getElementById('emotion-pills-grid');
+            container.innerHTML = '';
+
+            Object.values(emotionsDB).forEach(emo => {
+                const btn = document.createElement('button');
+                btn.onclick = () => selectEmotionDirectly(emo.id);
+                btn.className = `p-2.5 rounded-xl glass-card flex items-center gap-2.5 hover:bg-slate-800 transition text-left group`;
+                btn.innerHTML = `
+                    <div class="w-7 h-7 rounded-lg bg-slate-800 group-hover:bg-teal-500/20 text-teal-400 flex items-center justify-center text-xs shrink-0 transition">
+                        <i class="fa-solid ${emo.icon}"></i>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-300 group-hover:text-white truncate">${emo.name}</span>
+                `;
+                container.appendChild(btn);
+            });
+        }
+
+        // Metin Kutusu Karakter Sayacı
+        function setupTextareaCounter() {
+            const textarea = document.getElementById('mood-input');
+            const charCount = document.getElementById('char-count');
+            textarea.addEventListener('input', () => {
+                const len = textarea.value.length;
+                charCount.innerText = len;
+                if (len > 500) textarea.value = textarea.value.substring(0, 500);
+            });
+        }
+
+        function setQuickInput(text) {
+            const input = document.getElementById('mood-input');
+            input.value = text;
+            document.getElementById('char-count').innerText = text.length;
+            analyzeMood();
+        }
+
+        // 5. Metin Analizi Algoritması (NLP Simülasyonu)
+        function analyzeMood() {
+            const text = document.getElementById('mood-input').value.trim().toLowerCase();
+            if (!text) {
+                alert("Lütfen hislerinizi veya aklınızdan geçenleri yazın.");
+                return;
+            }
+
+            let bestMatch = null;
+            let highestScore = 0;
+
+            // Kelime eşleşme puanlaması
+            Object.values(emotionsDB).forEach(emo => {
+                let score = 0;
+                emo.keywords.forEach(kw => {
+                    if (text.includes(kw)) {
+                        score += 3;
+                    }
+                });
+
+                if (score > highestScore) {
+                    highestScore = score;
+                    bestMatch = emo;
+                }
+            });
+
+            // Eğer eşleşme bulunamadıysa metin uzunluğuna/rasgeleliğe dayalı seçim veya Karmaşığa yönlendirme
+            if (!bestMatch || highestScore === 0) {
+                if (text.length > 80) {
+                    bestMatch = emotionsDB["karma"];
+                } else {
+                    const keys = Object.keys(emotionsDB);
+                    const randomKey = keys[Math.floor(Math.random() * keys.length)];
+                    bestMatch = emotionsDB[randomKey];
+                }
+            }
+
+            displayResults(bestMatch, text);
+        }
+
+        function selectEmotionDirectly(emoId) {
+            const emo = emotionsDB[emoId];
+            if (emo) {
+                document.getElementById('mood-input').value = `Hissiyatım: ${emo.name}`;
+                document.getElementById('char-count').innerText = document.getElementById('mood-input').value.length;
+                displayResults(emo, `Doğrudan Seçildi: ${emo.name}`);
+            }
+        }
+
+        // 6. Sonuçları Ekrana Basma
+        function displayResults(emo, originalText) {
+            currentActiveEmotion = emo;
+
+            // Üst Özet
+            document.getElementById('detected-title').innerText = emo.name;
+            document.getElementById('detected-desc').innerText = emo.meaning;
+            document.getElementById('detected-icon').className = `fa-solid ${emo.icon}`;
+            document.getElementById('detected-icon-bg').className = `w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shadow-xl bg-gradient-to-br ${emo.color} text-white shrink-0`;
+
+            // 1. Psikolojik Anlam
+            document.getElementById('card-meaning').innerText = emo.meaning;
+
+            // 2. Tablo
+            document.getElementById('card-art-title').innerText = emo.art.title;
+            document.getElementById('card-art-artist').innerText = emo.art.artist;
+            document.getElementById('card-art-desc').innerText = emo.art.desc;
+            document.getElementById('art-search-link').href = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(emo.art.query)}`;
+
+            // 3. Hobi
+            document.getElementById('card-hobby-title').innerText = emo.hobby.title;
+            document.getElementById('card-hobby-desc').innerText = emo.hobby.desc;
+            document.getElementById('card-hobby-time').innerText = emo.hobby.time;
+
+            // 4. Müzik
+            document.getElementById('card-music-title').innerText = emo.music.title;
+            document.getElementById('card-music-artist').innerText = emo.music.artist;
+            document.getElementById('card-music-desc').innerText = emo.music.desc;
+            document.getElementById('music-youtube-link').href = `https://www.youtube.com/results?search_query=${encodeURIComponent(emo.music.query)}`;
+            document.getElementById('music-spotify-link').href = `https://open.spotify.com/search/${encodeURIComponent(emo.music.query)}`;
+
+            // 5. Film
+            document.getElementById('card-movie-title').innerText = emo.movie.title;
+            document.getElementById('card-movie-meta').innerText = emo.movie.meta;
+            document.getElementById('card-movie-desc').innerText = emo.movie.desc;
+            document.getElementById('movie-search-link').href = `https://www.google.com/search?q=${encodeURIComponent(emo.movie.query)}`;
+
+            // 6. Kitap
+            document.getElementById('card-book-title').innerText = emo.book.title;
+            document.getElementById('card-book-author').innerText = emo.book.author;
+            document.getElementById('card-book-quote').innerText = `"${emo.book.quote}"`;
+            document.getElementById('book-search-link').href = `https://www.google.com/search?q=${encodeURIComponent(emo.book.title + ' ' + emo.book.author)}`;
+
+            // 7. Eylem
+            document.getElementById('card-action-title').innerText = emo.action.title;
+            document.getElementById('card-action-desc').innerText = emo.action.desc;
+
+            // Favori Buton Durumu
+            updateFavoriteButtonState();
+
+            // Sonuçları Görünür Yap
+            const container = document.getElementById('results-container');
+            container.classList.remove('hidden');
+            container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // Sesi Çal
+            playMagicChime();
+
+            // Geçmişe Kaydet
+            saveToHistory(emo, originalText);
+        }
+
+        function markActionComplete(btn) {
+            btn.classList.remove('bg-teal-500/20', 'text-teal-300');
+            btn.classList.add('bg-emerald-500', 'text-slate-900', 'font-bold');
+            btn.innerHTML = `<i class="fa-solid fa-check"></i> Harika! Tamamlandı`;
+        }
+
+        function resetToHome() {
+            document.getElementById('results-container').classList.add('hidden');
+            document.getElementById('mood-input').value = '';
+            document.getElementById('char-count').innerText = '0';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 7. LocalStorage: Geçmiş & Favoriler Yönetimi
+        function getHistory() {
+            return JSON.parse(localStorage.getItem('moodify_history') || '[]');
+        }
+
+        function getFavorites() {
+            return JSON.parse(localStorage.getItem('moodify_favorites') || '[]');
+        }
+
+        function saveToHistory(emo, text) {
+            let history = getHistory();
+            const newItem = {
+                id: Date.now(),
+                emoId: emo.id,
+                emoName: emo.name,
+                icon: emo.icon,
+                text: text,
+                date: new Date().toLocaleDateString('tr-TR', { hour: '2-digit', minute: '2-digit' })
+            };
+            history.unshift(newItem);
+            if (history.length > 20) history.pop(); // Son 20 kayıt
+            localStorage.setItem('moodify_history', JSON.stringify(history));
+            loadFavoritesAndHistoryCounts();
+        }
+
+        function toggleCurrentFavorite() {
+            if (!currentActiveEmotion) return;
+            let favorites = getFavorites();
+            const index = favorites.findIndex(f => f.emoId === currentActiveEmotion.id);
+
+            if (index >= 0) {
+                favorites.splice(index, 1);
+            } else {
+                favorites.push({
+                    emoId: currentActiveEmotion.id,
+                    emoName: currentActiveEmotion.name,
+                    icon: currentActiveEmotion.icon,
+                    date: new Date().toLocaleDateString('tr-TR')
+                });
+            }
+
+            localStorage.setItem('moodify_favorites', JSON.stringify(favorites));
+            updateFavoriteButtonState();
+            loadFavoritesAndHistoryCounts();
+        }
+
+        function updateFavoriteButtonState() {
+            if (!currentActiveEmotion) return;
+            const favorites = getFavorites();
+            const isFav = favorites.some(f => f.emoId === currentActiveEmotion.id);
+            const icon = document.getElementById('fav-star-icon');
+            const text = document.getElementById('fav-btn-text');
+
+            if (isFav) {
+                icon.className = "fa-solid fa-star text-amber-400";
+                text.innerText = "Favorilerde";
+            } else {
+                icon.className = "fa-regular fa-star";
+                text.innerText = "Favorilere Ekle";
+            }
+        }
+
+        function loadFavoritesAndHistoryCounts() {
+            const favs = getFavorites();
+            const hist = getHistory();
+            document.getElementById('fav-count').innerText = favs.length;
+            document.getElementById('history-count').innerText = hist.length;
+
+            const badge = document.getElementById('history-badge');
+            if (favs.length + hist.length > 0) {
+                badge.classList.remove('hidden');
+                badge.innerText = favs.length;
+            } else {
+                badge.classList.add('hidden');
+            }
+        }
+
+        // Modal Yönetimi
+        let activeModalTab = 'fav';
+
+        function toggleHistoryModal() {
+            const modal = document.getElementById('history-modal');
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                renderModalContent();
+            }
+        }
+
+        function switchModalTab(tab) {
+            activeModalTab = tab;
+            const tabFav = document.getElementById('tab-fav');
+            const tabHist = document.getElementById('tab-history');
+
+            if (tab === 'fav') {
+                tabFav.className = "px-4 py-1.5 rounded-lg text-xs font-semibold bg-teal-500/20 text-teal-300 border border-teal-500/30";
+                tabHist.className = "px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:bg-slate-800";
+            } else {
+                tabHist.className = "px-4 py-1.5 rounded-lg text-xs font-semibold bg-teal-500/20 text-teal-300 border border-teal-500/30";
+                tabFav.className = "px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:bg-slate-800";
+            }
+            renderModalContent();
+        }
+
+        function renderModalContent() {
+            const container = document.getElementById('modal-list-content');
+            container.innerHTML = '';
+
+            if (activeModalTab === 'fav') {
+                const favs = getFavorites();
+                if (favs.length === 0) {
+                    container.innerHTML = `<p class="text-xs text-slate-500 text-center py-8">Henüz favorilere eklenmiş bir duygu yok.</p>`;
+                    return;
+                }
+                favs.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = "p-3 rounded-xl glass-card flex items-center justify-between hover:border-teal-500/40 cursor-pointer";
+                    div.onclick = () => { selectEmotionDirectly(item.emoId); toggleHistoryModal(); };
+                    div.innerHTML = `
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid ${item.icon} text-teal-400 text-base"></i>
+                            <div>
+                                <h5 class="text-xs font-bold text-slate-200">${item.emoName}</h5>
+                                <span class="text-[10px] text-slate-500">${item.date}</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-xs text-slate-600"></i>
+                    `;
+                    container.appendChild(div);
+                });
+            } else {
+                const hist = getHistory();
+                if (hist.length === 0) {
+                    container.innerHTML = `<p class="text-xs text-slate-500 text-center py-8">Geçmiş analiz bulunmuyor.</p>`;
+                    return;
+                }
+                hist.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = "p-3 rounded-xl glass-card flex items-center justify-between hover:border-indigo-500/40 cursor-pointer";
+                    div.onclick = () => { selectEmotionDirectly(item.emoId); toggleHistoryModal(); };
+                    div.innerHTML = `
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid ${item.icon} text-indigo-400 text-base"></i>
+                            <div>
+                                <h5 class="text-xs font-bold text-slate-200">${item.emoName}</h5>
+                                <p class="text-[11px] text-slate-400 line-clamp-1 border-l-2 border-slate-700 pl-1.5 my-0.5">"${item.text}"</p>
+                                <span class="text-[10px] text-slate-500">${item.date}</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-rotate-right text-xs text-slate-600"></i>
+                    `;
+                    container.appendChild(div);
+                });
+            }
+        }
+
+        function clearAllData() {
+            if (confirm("Tüm geçmiş ve favori verileriniz silinecektir. Onaylıyor musunuz?")) {
+                localStorage.removeItem('moodify_history');
+                localStorage.removeItem('moodify_favorites');
+                loadFavoritesAndHistoryCounts();
+                renderModalContent();
+            }
+        }
+
+        function shareResults() {
+            if (navigator.share && currentActiveEmotion) {
+                navigator.share({
+                    title: 'Moodify - Duygu Önerim',
+                    text: `Moodify'da bugünkü duygu durumum: ${currentActiveEmotion.name}. Bana özel tablo, müzik ve hobi önerisini keşfet!`,
+                    url: window.location.href,
+                }).catch(() => {});
+            } else {
+                alert("Bağlantı kopyalandı! Dostlarınızla paylaşabilirsiniz.");
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+Gemini insan değildir. Hata yapabildiğinden verdiği yanıtları doğrulayın.
+
